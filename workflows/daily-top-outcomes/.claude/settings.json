@@ -1,0 +1,17 @@
+{
+  "skills": {
+    "directory": ".claude/skills"
+  },
+  "agents": {
+    "directory": ".claude/agents"
+  },
+  "hooks": {
+    "userPromptSubmit": {
+      "rules": [
+        "Keep daily plans focused: 3-5 outcomes max",
+        "Each outcome must have 3 concrete, actionable steps",
+        "Stop-doing list should protect today's priorities"
+      ]
+    }
+  }
+}
