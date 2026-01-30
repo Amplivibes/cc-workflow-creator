@@ -212,7 +212,7 @@ One practical method:
 - Run a short prompt that forces the model to reveal its identity or capabilities, then compare behavior.
 - Turn on verbose logging if your wrapper supports it.
 - If you use a wrapper script, print environment variables and the chosen model before executing `claude`.
-
+- Check the ollama logs with this terminal command: `tail -f ~/.ollama/logs/server.log`
 ---
 
 ## Troubleshooting
