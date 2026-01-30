@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+set -e
+
+export ANTHROPIC_BASE_URL="http://localhost:11434"
+export ANTHROPIC_AUTH_TOKEN="ollama"
+export ANTHROPIC_API_KEY=""
+
+DEFAULT_MODEL="glm-4.7:cloud"
+
+# If user already passed --model, don't add one.
+for a in "$@"; do
+  if [[ "$a" == "--model" ]]; then
+    exec claude "$@"
+  fi
+done
+
+exec claude --model "$DEFAULT_MODEL" "$@"
